@@ -1,1 +1,90 @@
 @import url("./reset.css");
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto 100px;
+  overflow-x: hidden;
+}
+.container h1 {
+  margin: 100px 0 25px;
+  padding: 0 10px 25px;
+  border-bottom: 2px solid #000;
+  font: 2rem "arial";
+}
+.container form {
+  /* text-align: right; */
+  padding: 0 15px;
+}
+.container select {
+  width: 190px;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  outline: none;
+  font: 0.875rem "arial";
+  cursor: pointer;
+}
+.container .sort-buttons {
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+.container .sort-buttons a {
+  display: inline-block;
+  margin-right: 30px;
+  font: 0.8125rem "arial";
+  position: relative;
+  cursor: pointer;
+}
+.container .sort-buttons a::after {
+  position: absolute;
+  top: 7px;
+  right: -20px;
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background: #ccc;
+}
+.container .sort-buttons a:last-child::after {
+  display: none;
+}
+.container .sort-buttons a:hover {
+  text-decoration: underline;
+}
+.container ul {
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  overflow-y: hidden;
+  /* flex: 1 0 20%; */
+}
+.container ul li {
+  width: 18.49%;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+.container ul li img {
+  width: 100%;
+  height: 70%;
+  border-bottom: 1px solid #ccc;
+}
+.container ul li div {
+  width: 100%;
+  height: 30%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
