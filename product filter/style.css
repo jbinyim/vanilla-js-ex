@@ -27,6 +27,11 @@
   font: 0.875rem "arial";
   cursor: pointer;
 }
+
+.container .searchs {
+  display: flex;
+  justify-content: space-between;
+}
 .container .sort-buttons {
   margin-bottom: 20px;
   padding: 0 15px;
@@ -38,6 +43,7 @@
   position: relative;
   cursor: pointer;
 }
+
 .container .sort-buttons a::after {
   position: absolute;
   top: 7px;
@@ -54,16 +60,36 @@
 .container .sort-buttons a:hover {
   text-decoration: underline;
 }
+.active {
+  text-decoration: underline;
+}
+.container .searchText {
+  width: 190px;
+  outline: none;
+  padding: 3px 5px;
+}
+.container .searchSubmit {
+  padding: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.container .searchSubmit:hover {
+  border: 1px solid #000;
+  background: none;
+  border-radius: 3px;
+}
+
 .container ul {
   padding: 0 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 23px;
   overflow-y: hidden;
-  /* flex: 1 0 20%; */
 }
 .container ul li {
-  width: 18.49%;
+  flex: 1 0 18%;
+  max-width: 18%;
   height: 400px;
   border: 1px solid #ccc;
 }
@@ -82,9 +108,41 @@
   align-items: flex-start;
   gap: 15px;
 }
-@media screen and (max-width: 1024px) {
-  .container {
-    width: 100%;
-    height: 100%;
+@media screen and (max-width: 970px) {
+  .container ul li {
+    flex: 1 0 22%;
+    max-width: 22%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .container h1 {
+    text-align: center;
+  }
+  .container form {
+    text-align: center;
+  }
+  .container .searchs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .container .searchText {
+    width: 180px;
+  }
+  .container ul li {
+    flex: 1 0 46%;
+    max-width: 46%;
+  }
+  .container ul li div {
+    overflow: hidden;
+  }
+  .container ul li div h3 {
+    display: inline-block;
+    width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

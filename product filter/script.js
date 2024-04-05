@@ -1,12 +1,39 @@
 import products from "./product.js";
 
 const select = document.querySelector("#catagory");
+const newlisting = document.querySelector(".newlisting");
+const descending = document.querySelector(".descending");
+const ascending = document.querySelector(".ascending");
+const buttons = document.querySelectorAll(".searchs .sort-buttons a");
+const search = document.querySelector(".search");
+
+console.log(select.options[0]);
 
 const removeItems = () => {
   const items = document.querySelectorAll("li");
   items.forEach((item) => {
     item.remove();
   });
+};
+
+const searchSubmit = (e) => {
+  e.preventDefault();
+  const searchText = document.querySelector(".searchText");
+  const value = searchText.value;
+
+  if (value !== "") {
+    const searchBook = products.data.filter((product) =>
+      product.name.includes(value)
+    );
+
+    removeItems();
+    searchBook.forEach((product) => {
+      createItem(product);
+    });
+    searchText.value = "";
+  } else {
+    location.reload(true);
+  }
 };
 
 const selectCategory = (e) => {
@@ -19,6 +46,59 @@ const selectCategory = (e) => {
 
   removeItems();
   filtered.forEach((product) => {
+    createItem(product);
+  });
+};
+
+const sortNew = () => {
+  select.value = select.options[0].value;
+  buttons.forEach((a) => {
+    a.classList.remove("active");
+  });
+  newlisting.classList.add("active");
+
+  const myProducts = products.data.sort((a, b) => {
+    return a.id - b.id;
+  });
+
+  removeItems();
+  myProducts.forEach((product) => {
+    createItem(product);
+  });
+};
+
+const sortDesc = () => {
+  select.value = select.options[0].value;
+  buttons.forEach((a) => {
+    a.classList.remove("active");
+  });
+  descending.classList.add("active");
+
+  const myProducts = products.data.sort((a, b) => {
+    return a.price - b.price;
+  });
+
+  removeItems();
+
+  myProducts.forEach((product) => {
+    createItem(product);
+  });
+};
+
+const sortAsce = () => {
+  select.value = select.options[0].value;
+  buttons.forEach((a) => {
+    a.classList.remove("active");
+  });
+  ascending.classList.add("active");
+
+  const myProducts = products.data.sort((a, b) => {
+    return b.price - a.price;
+  });
+
+  removeItems();
+
+  myProducts.forEach((product) => {
     createItem(product);
   });
 };
@@ -67,3 +147,7 @@ const importData = () => {
 importData();
 
 select.addEventListener("change", selectCategory);
+newlisting.addEventListener("click", sortNew);
+descending.addEventListener("click", sortDesc);
+ascending.addEventListener("click", sortAsce);
+search.addEventListener("submit", searchSubmit);

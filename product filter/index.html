@@ -18,10 +18,21 @@
           <option value="study">자기개발</option>
         </select>
       </form>
-      <div class="sort-buttons">
-        <a class="newlisting">출시순</a>
-        <a class="descending">낮은 가격순</a>
-        <a class="ascending">높은 가격순</a>
+      <div class="searchs">
+        <div class="sort-buttons">
+          <a class="newlisting active">출시순</a>
+          <a class="descending">낮은 가격순</a>
+          <a class="ascending">높은 가격순</a>
+        </div>
+        <form
+          class="search"
+          name="testForm2"
+          action="https://localhost:3000"
+          method="post"
+        >
+          <input class="searchText" type="text" />
+          <input class="searchSubmit" type="submit" value="검색" />
+        </form>
       </div>
       <ul>
         <!-- <li>
