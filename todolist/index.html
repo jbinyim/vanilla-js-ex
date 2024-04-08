@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/cac4ca8f2a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>✅메모장</h1>
+      </header>
+      <section>
+        <form
+          name="testForm"
+          action="https://localhost:3000/todolist.js"
+          method="post"
+        >
+          <input class="memoInput" type="text" />
+          <input type="submit" value="+" />
+        </form>
+      </section>
+      <article>
+        <ul>
+          <li>
+            <div class="checkBox active">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <p>메모</p>
+            <button class="delete">삭제</button>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

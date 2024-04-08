@@ -1,0 +1,96 @@
+@import url("./reset.css");
+
+body {
+  background: #ffe4a1;
+}
+
+.container {
+  width: 80%;
+  min-width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 200px auto;
+  padding: 50px 10px;
+  border: 1px solid #1f1d1f;
+  border-radius: 8px;
+}
+
+header h1 {
+  color: #1f1d1f;
+}
+
+section form {
+  display: flex;
+  gap: 5px;
+}
+section form .memoInput {
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 5px;
+}
+section form input[type="submit"] {
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background: #1f1d1f;
+  transition: all 0.3s;
+}
+section form input[type="submit"]:hover {
+  background: #fff;
+  color: #1f1d1f;
+}
+article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+article ul li {
+  border-bottom: 1px solid #a52a2a;
+  width: 100%;
+  min-width: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+article ul li .checkBox {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.checkBox.active {
+  background: #ffe4a1;
+  color: #1f1d1f;
+}
+
+article ul li .checkBox:hover {
+  background: #ffe4a1;
+  color: #1f1d1f;
+}
+article ul li button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+article ul li button:hover {
+  background: #a52a2a;
+  color: #fff;
+}
