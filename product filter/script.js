@@ -7,8 +7,6 @@ const ascending = document.querySelector(".ascending");
 const buttons = document.querySelectorAll(".searchs .sort-buttons a");
 const search = document.querySelector(".search");
 
-console.log(select.options[0]);
-
 const removeItems = () => {
   const items = document.querySelectorAll("li");
   items.forEach((item) => {

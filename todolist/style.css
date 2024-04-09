@@ -5,8 +5,8 @@ body {
 }
 
 .container {
-  width: 80%;
-  min-width: 300px;
+  width: 60%;
+  min-width: 320px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@ article ul {
 article ul li {
   border-bottom: 1px solid #a52a2a;
   width: 100%;
-  min-width: 350px;
+  min-width: 300px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -76,6 +76,9 @@ article ul li .checkBox {
 .checkBox.active {
   background: #ffe4a1;
   color: #1f1d1f;
+}
+article ul li p.ch {
+  text-decoration: line-through;
 }
 
 article ul li .checkBox:hover {
