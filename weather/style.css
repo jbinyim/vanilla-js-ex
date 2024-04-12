@@ -1,13 +1,18 @@
 @import url("./reset.css");
 
-.container {
+article {
   width: 1200px;
   height: 100vh;
-  margin: 0 auto;
+  margin: 50px auto;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: #f2f1ed; */
+  background: #f2f1ed;
   padding: 10px;
 }
 .map {
@@ -17,12 +22,7 @@
   background: url("./img/map.png") center/contain no-repeat;
   position: relative;
 }
-.info {
-  width: 40%;
-  height: 450px;
-  border: 1px solid #f00;
-  /* background: #fff; */
-}
+
 .ping {
   position: absolute;
   top: 0;
@@ -35,48 +35,143 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
-.seoul {
-  top: 250px;
+.ping h4 {
+  font-size: 12px;
+}
+.ping img {
+  width: 70%;
+}
+.ping p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#Seoul {
+  top: calc(250px - 90px);
   left: 290px;
 }
-.incheon {
-  top: 270px;
+#Incheon {
+  top: calc(270px - 90px);
   left: 220px;
 }
-.gyeonggi-do {
-  top: 335px;
+#Gyeonggi-do {
+  top: calc(335px - 90px);
   left: 280px;
 }
-.gangwon-do {
-  top: 250px;
+#Gangwon-do {
+  top: calc(250px - 90px);
   left: 400px;
 }
-.cheongju {
-  top: 350px;
+#Cheongju {
+  top: calc(350px - 90px);
   left: 350px;
 }
-.pohang {
-  top: 380px;
+#Pohang {
+  top: calc(380px - 90px);
   left: 450px;
 }
-.mokpo {
-  top: 530px;
+#Mokpo {
+  top: calc(530px - 90px);
   left: 230px;
 }
-.daejeon {
-  top: 420px;
+#Daejeon {
+  top: calc(420px - 90px);
   left: 300px;
 }
-.daegu {
-  top: 450px;
+#Daegu {
+  top: calc(450px - 90px);
   left: 380px;
 }
-.busan {
-  top: 530px;
+#Busan {
+  top: calc(530px - 90px);
   left: 420px;
 }
-.jeju-do {
-  top: 630px;
+#Jeju-do {
+  top: calc(630px - 90px);
   left: 230px;
+}
+.active {
+  border: 2px solid #ed6f4c;
+}
+
+.info {
+  width: 40%;
+  height: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.info .weather_temp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.info .weather_temp .temp {
+  display: flex;
+  align-items: center;
+}
+.info .weather_wind {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .ping {
+    height: 50px;
+  }
+  .ping > p {
+    display: none;
+  }
+
+  #Seoul {
+    top: calc(250px - 200px);
+    left: 290px;
+  }
+  #Incheon {
+    top: calc(270px - 200px);
+    left: 220px;
+  }
+  #Gyeonggi-do {
+    top: calc(335px - 230px);
+    left: 280px;
+  }
+  #Gangwon-do {
+    top: calc(250px - 210px);
+    left: 380px;
+  }
+  #Cheongju {
+    top: calc(350px - 230px);
+    left: 350px;
+  }
+  #Pohang {
+    top: calc(380px - 220px);
+    left: 420px;
+  }
+  #Mokpo {
+    top: calc(530px - 290px);
+    left: 250px;
+  }
+  #Daejeon {
+    top: calc(420px - 250px);
+    left: 300px;
+  }
+  #Daegu {
+    top: calc(450px - 260px);
+    left: 360px;
+  }
+  #Busan {
+    top: calc(530px - 300px);
+    left: 410px;
+  }
+  #Jeju-do {
+    top: calc(630px - 330px);
+    left: 270px;
+  }
 }
