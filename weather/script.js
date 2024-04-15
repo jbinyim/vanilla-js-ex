@@ -1,5 +1,32 @@
 const env = "bfbc44981f610587796d590b60f841d7";
 
+const changeTitle = (data) => {
+  switch (data) {
+    case "Incheon":
+      return "인천";
+    case "Seoul":
+      return "서울";
+    case "Gangwon-do":
+      return "강원도";
+    case "Gyeonggi-do":
+      return "경기도";
+    case "Cheongju-si":
+      return "청주";
+    case "Daejeon":
+      return "대전";
+    case "Daegu":
+      return "대구";
+    case "Pohang":
+      return "포항";
+    case "Busan":
+      return "부산";
+    case "Mokpo":
+      return "목포";
+    case "Jeju-do":
+      return "제주";
+  }
+};
+
 const renderDataInfo = (data) => {
   const info = document.querySelector(".info");
   info.innerText = "";
@@ -19,6 +46,8 @@ const renderDataInfo = (data) => {
   temp.className = "temp";
   temp_detail.className = "temp_detail";
   weather_wind.className = "weather_wind";
+
+  h3.innerText = `${changeTitle(data.name)}`;
   img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   h1.innerText = `${data.main.temp}도`;
   text.innerText = data.weather[0].description;
@@ -30,7 +59,7 @@ const renderDataInfo = (data) => {
   temp_detail.append(text, percent);
   temp.append(img, h1);
   weather_temp.append(temp, temp_detail);
-  h3.innerText = data.name;
+
   info.append(h3, weather_temp, weather_wind);
 };
 
@@ -39,7 +68,7 @@ const renderData = (data, it) => {
   const img = document.createElement("img");
   const p = document.createElement("p");
 
-  h4.innerText = `${data.name}`;
+  h4.innerText = `${changeTitle(data.name)}`;
   img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   p.innerText = `${data.weather[0].description}`;
   it.append(h4, img, p);

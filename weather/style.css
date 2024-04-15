@@ -93,7 +93,7 @@ article {
   left: 230px;
 }
 .active {
-  border: 2px solid #ed6f4c;
+  outline: 2px solid #ed6f4c;
 }
 
 .info {
@@ -171,7 +171,123 @@ article {
     left: 410px;
   }
   #Jeju-do {
-    top: calc(630px - 330px);
-    left: 270px;
+    top: calc(630px - 280px);
+    left: calc(270px - 20px);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  article {
+    width: 100%;
+  }
+  .map {
+    width: 463px;
+  }
+  #Seoul {
+    top: calc(250px - 180px);
+    left: calc(290px - 110px);
+  }
+  #Incheon {
+    top: calc(270px - 175px);
+    left: calc(220px - 110px);
+  }
+  #Gyeonggi-do {
+    top: calc(335px - 210px);
+    left: calc(280px - 110px);
+  }
+  #Gangwon-do {
+    top: calc(250px - 180px);
+    left: calc(380px - 130px);
+  }
+  #Cheongju {
+    top: calc(350px - 220px);
+    left: calc(350px - 110px);
+  }
+  #Pohang {
+    top: calc(380px - 200px);
+    left: calc(420px - 130px);
+  }
+  #Mokpo {
+    top: calc(530px - 270px);
+    left: calc(250px - 100px);
+  }
+  #Daejeon {
+    top: calc(420px - 240px);
+    left: calc(300px - 100px);
+  }
+  #Daegu {
+    top: calc(450px - 230px);
+    left: calc(360px - 120px);
+  }
+  #Busan {
+    top: calc(530px - 280px);
+    left: calc(410px - 120px);
+  }
+  #Jeju-do {
+    top: calc(630px - 300px);
+    left: calc(270px - 120px);
+  }
+
+  .info {
+    gap: 15px;
+  }
+
+  .info .weather_temp {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  .map {
+    width: 360px;
+  }
+
+  .ping {
+    width: 40px;
+  }
+
+  #Seoul {
+    top: calc(250px - 180px - 40px);
+    left: calc(290px - 110px - 50px);
+  }
+  #Incheon {
+    top: calc(270px - 175px - 40px);
+    left: calc(220px - 110px - 50px);
+  }
+  #Gyeonggi-do {
+    top: calc(335px - 210px - 40px);
+    left: calc(280px - 110px - 40px);
+  }
+  #Gangwon-do {
+    top: calc(250px - 180px - 40px);
+    left: calc(380px - 130px - 50px);
+  }
+  #Cheongju {
+    top: calc(350px - 220px - 40px);
+    left: calc(350px - 110px - 60px);
+  }
+  #Pohang {
+    top: calc(380px - 200px - 40px);
+    left: calc(420px - 130px - 50px);
+  }
+  #Mokpo {
+    top: calc(530px - 270px - 90px);
+    left: calc(250px - 100px - 50px);
+  }
+  #Daejeon {
+    top: calc(420px - 240px - 50px);
+    left: calc(300px - 100px - 50px);
+  }
+  #Daegu {
+    top: calc(450px - 230px - 70px);
+    left: calc(360px - 120px - 50px);
+  }
+  #Busan {
+    top: calc(530px - 280px - 60px);
+    left: calc(410px - 120px - 70px);
+  }
+  #Jeju-do {
+    top: calc(630px - 300px - 90px);
+    left: calc(270px - 120px - 40px);
   }
 }
